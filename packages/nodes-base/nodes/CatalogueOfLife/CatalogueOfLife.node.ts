@@ -129,7 +129,7 @@ export class CatalogueOfLife implements INodeType {
 				displayName: 'Query',
 				name: 'q',
 				type: 'string',
-				required: true,
+				required: false,
 				displayOptions: {
 					show: {
 						operation: [
@@ -2532,6 +2532,434 @@ export class CatalogueOfLife implements INodeType {
 						],
 					},
 					{
+						displayName: 'Status',
+						name: 'status',
+						type: 'options',
+						default: '',
+						required: false,
+						description: 'The status of the name usage',
+						options: [
+							{
+								name: 'Accepted',
+								value: 'accepted',
+							},
+							{
+								name: 'Ambiguous synonym',
+								value: 'ambiguous_synonym',
+							},
+							{
+								name: 'Misapplied name',
+								value: 'misapplied_name',
+							},
+							{
+								name: 'Provisionally accepted',
+								value: 'provisionally_accepted',
+							},
+							{
+								name: 'Synonym',
+								value: 'synonym',
+							},
+						],
+					},
+					{
+						displayName: 'Rank',
+						name: 'rank',
+						type: 'options',
+						default: '',
+						required: false,
+						description: 'The minimum rank',
+						options: [
+							{
+								name: 'Domain',
+								value: 'DOMAIN',
+							},
+							{
+								name: 'Realm',
+								value: 'REALM',
+							},
+							{
+								name: 'Subrealm',
+								value: 'SUBREALM',
+							},
+							{
+								name: 'Superkingdom',
+								value: 'SUPERKINGDOM',
+							},
+							{
+								name: 'Kingdom',
+								value: 'KINGDOM',
+							},
+							{
+								name: 'Subkingdom',
+								value: 'SUBKINGDOM',
+							},
+							{
+								name: 'Infrakingdom',
+								value: 'INFRAKINGDOM',
+							},
+							{
+								name: 'Superphylum',
+								value: 'SUPERPHYLUM',
+							},
+							{
+								name: 'Phylum',
+								value: 'PHYLUM',
+							},
+							{
+								name: 'Subphylum',
+								value: 'SUBPHYLUM',
+							},
+							{
+								name: 'Infraphylum',
+								value: 'INFRAPHYLUM',
+							},
+							{
+								name: 'Parvphylum',
+								value: 'PARVPHYLUM',
+							},
+							{
+								name: 'Microphylum',
+								value: 'MICROPHYLUM',
+							},
+							{
+								name: 'Nanophylum',
+								value: 'NANOPHYLUM',
+							},
+							{
+								name: 'Gigaclass',
+								value: 'GIGACLASS',
+							},
+							{
+								name: 'Megaclass',
+								value: 'MEGACLASS',
+							},
+							{
+								name: 'Superclass',
+								value: 'SUPERCLASS',
+							},
+							{
+								name: 'Class',
+								value: 'CLASS',
+							},
+							{
+								name: 'Subclass',
+								value: 'SUBCLASS',
+							},
+							{
+								name: 'Infraclass',
+								value: 'INFRACLASS',
+							},
+							{
+								name: 'Subterclass',
+								value: 'SUBTERCLASS',
+							},
+							{
+								name: 'Parvclass',
+								value: 'PARVCLASS',
+							},
+							{
+								name: 'Superdivision',
+								value: 'SUPERDIVISION',
+							},
+							{
+								name: 'Division',
+								value: 'DIVISION',
+							},
+							{
+								name: 'Subdivision',
+								value: 'SUBDIVISION',
+							},
+							{
+								name: 'Infradivision',
+								value: 'INFRADIVISION',
+							},
+							{
+								name: 'Superlegion',
+								value: 'SUPERLEGION',
+							},
+							{
+								name: 'Legion',
+								value: 'LEGION',
+							},
+							{
+								name: 'Sublegion',
+								value: 'SUBLEGION',
+							},
+							{
+								name: 'Infralegion',
+								value: 'INFRALEGION',
+							},
+							{
+								name: 'Megacohort',
+								value: 'MEGACOHORT',
+							},
+							{
+								name: 'Supercohort',
+								value: 'SUPERCOHORT',
+							},
+							{
+								name: 'Cohort',
+								value: 'COHORT',
+							},
+							{
+								name: 'Subcohort',
+								value: 'SUBCOHORT',
+							},
+							{
+								name: 'Infracohort',
+								value: 'INFRACOHORT',
+							},
+							{
+								name: 'Gigaorder',
+								value: 'GIGAORDER',
+							},
+							{
+								name: 'Magnorder',
+								value: 'MAGNORDER',
+							},
+							{
+								name: 'Grandorder',
+								value: 'GRANDORDER',
+							},
+							{
+								name: 'Mirorder',
+								value: 'MIRORDER',
+							},
+							{
+								name: 'Superorder',
+								value: 'SUPERORDER',
+							},
+							{
+								name: 'Order',
+								value: 'ORDER',
+							},
+							{
+								name: 'Nanorder',
+								value: 'NANORDER',
+							},
+							{
+								name: 'Hypoorder',
+								value: 'HYPOORDER',
+							},
+							{
+								name: 'Minorder',
+								value: 'MINORDER',
+							},
+							{
+								name: 'Suborder',
+								value: 'SUBORDER',
+							},
+							{
+								name: 'Infraorder',
+								value: 'INFRAORDER',
+							},
+							{
+								name: 'Parvorder',
+								value: 'PARVORDER',
+							},
+							{
+								name: 'Megafamily',
+								value: 'MEGAFAMILY',
+							},
+							{
+								name: 'Grandfamily',
+								value: 'GRANDFAMILY',
+							},
+							{
+								name: 'Superfamily',
+								value: 'SUPERFAMILY',
+							},
+							{
+								name: 'Epifamily',
+								value: 'EPIFAMILY',
+							},
+							{
+								name: 'Family',
+								value: 'FAMILY',
+							},
+							{
+								name: 'Subfamily',
+								value: 'SUBFAMILY',
+							},
+							{
+								name: 'Infrafamily',
+								value: 'INFRAFAMILY',
+							},
+							{
+								name: 'Supertribe',
+								value: 'SUPERTRIBE',
+							},
+							{
+								name: 'Tribe',
+								value: 'TRIBE',
+							},
+							{
+								name: 'Subtribe',
+								value: 'SUBTRIBE',
+							},
+							{
+								name: 'Infratribe',
+								value: 'INFRATRIBE',
+							},
+							{
+								name: 'Suprageneric Name',
+								value: 'SUPRAGENERIC_NAME',
+							},
+							{
+								name: 'Genus',
+								value: 'GENUS',
+							},
+							{
+								name: 'Subgenus',
+								value: 'SUBGENUS',
+							},
+							{
+								name: 'Infragenus',
+								value: 'INFRAGENUS',
+							},
+							{
+								name: 'Supersection',
+								value: 'SUPERSECTION',
+							},
+							{
+								name: 'Section',
+								value: 'SECTION',
+							},
+							{
+								name: 'Subsection',
+								value: 'SUBSECTION',
+							},
+							{
+								name: 'Superseries',
+								value: 'SUPERSERIES',
+							},
+							{
+								name: 'Series',
+								value: 'SERIES',
+							},
+							{
+								name: 'Subseries',
+								value: 'SUBSERIES',
+							},
+							{
+								name: 'Infrageneric Name',
+								value: 'INFRAGENERIC_NAME',
+							},
+							{
+								name: 'Species Aggregate',
+								value: 'SPECIES_AGGREGATE',
+							},
+							{
+								name: 'Species',
+								value: 'SPECIES',
+							},
+							{
+								name: 'Infraspecific Name',
+								value: 'INFRASPECIFIC_NAME',
+							},
+							{
+								name: 'Grex',
+								value: 'GREX',
+							},
+							{
+								name: 'Subspecies',
+								value: 'SUBSPECIES',
+							},
+							{
+								name: 'Cultivar Group',
+								value: 'CULTIVAR_GROUP',
+							},
+							{
+								name: 'Convariety',
+								value: 'CONVARIETY',
+							},
+							{
+								name: 'Infrasubspecific Name',
+								value: 'INFRASUBSPECIFIC_NAME',
+							},
+							{
+								name: 'Proles',
+								value: 'PROLES',
+							},
+							{
+								name: 'Natio',
+								value: 'NATIO',
+							},
+							{
+								name: 'Aberration',
+								value: 'ABERRATION',
+							},
+							{
+								name: 'Morph',
+								value: 'MORPH',
+							},
+							{
+								name: 'Variety',
+								value: 'VARIETY',
+							},
+							{
+								name: 'Subvariety',
+								value: 'SUBVARIETY',
+							},
+							{
+								name: 'Form',
+								value: 'FORM',
+							},
+							{
+								name: 'Subform',
+								value: 'SUBFORM',
+							},
+							{
+								name: 'Pathovar',
+								value: 'PATHOVAR',
+							},
+							{
+								name: 'Biovar',
+								value: 'BIOVAR',
+							},
+							{
+								name: 'Chemovar',
+								value: 'CHEMOVAR',
+							},
+							{
+								name: 'Morphovar',
+								value: 'MORPHOVAR',
+							},
+							{
+								name: 'Phagovar',
+								value: 'PHAGOVAR',
+							},
+							{
+								name: 'Serovar',
+								value: 'SEROVAR',
+							},
+							{
+								name: 'Chemoform',
+								value: 'CHEMOFORM',
+							},
+							{
+								name: 'Forma Specialis',
+								value: 'FORMA_SPECIALIS',
+							},
+							{
+								name: 'Cultivar',
+								value: 'CULTIVAR',
+							},
+							{
+								name: 'Strain',
+								value: 'STRAIN',
+							},
+							{
+								name: 'Other',
+								value: 'OTHER',
+							},
+							{
+								name: 'Unranked',
+								value: 'UNRANKED',
+							},
+						],
+					},
+					{
 						displayName: 'Reverse',
 						name: 'reverse',
 						type: 'boolean',
@@ -4422,6 +4850,12 @@ export class CatalogueOfLife implements INodeType {
 					}
 					if (additionalFields.maxRank) {
 						qs.maxRank = additionalFields.maxRank;
+					}
+					if (additionalFields.rank) {
+						qs.rank = additionalFields.rank;
+					}
+					if (additionalFields.status) {
+						qs.status = additionalFields.status;
 					}
 					if (additionalFields.offset) {
 						qs.offset = additionalFields.offset;
