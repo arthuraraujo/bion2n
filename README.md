@@ -33,7 +33,7 @@ This demo shows how to use the [Wikidata Query Service](https://query.wikidata.o
 
 ### Demo 3: Recording scientific names mentioned on social media
 This automatic workflow searches for mentions of "species" within a sample of Twitter tweets posted in the last 24 hours, uses the `GlobalNames` node wrapping the [GNFinder service](https://finder.globalnames.org) to find any scientific names mentioned in the tweet text, and saves the [output](https://docs.google.com/spreadsheets/d/1Z4YX3Wj3Vu9Vz3CTu98Uvo4OxSFlFJb5dJ1NPydCGBM/edit#gid=0) to a `GoogleSheet` spreadsheet.
-[![sm_demo_sci_names_social_media](https://user-images.githubusercontent.com/8573609/184546028-012da5d6-275f-46bd-9bee-ed1ced4084e6.png)]((https://user-images.githubusercontent.com/8573609/184546021-a8b51aaa-1121-4bd2-b5e0-b7be4d33a356.png))
+[![sm_demo_sci_names_social_media](https://user-images.githubusercontent.com/8573609/184546028-012da5d6-275f-46bd-9bee-ed1ced4084e6.png)](https://user-images.githubusercontent.com/8573609/184704417-9cc4e16f-c4d3-49cc-a73e-88efb62ae589.png)
 
 
 ### Demo 4: Tracking GBIF occurrences by country over time
